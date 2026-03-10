@@ -99,11 +99,11 @@ This ensures the newly configured account lockout policy is applied to the clien
 On <b>DC-1</b>, open <b>Active Directory Users and Computers (ADUC)</b> and within the <b>_EMPLOYEES OU</b> select a random user account that was created in the <a href="https://github.com/chrisdegutis/ad-domain-deployment">previous lab</a>.
 </p>
 <p>
-Take note of the user logon name for that account. 
+<b>Double-click</b> (or right-click > properties) and in the <b>Account</b> tab, take note of the <b>user logon name</b>. In this lab, I will be using <b>John Baker (jbaker)</b> with the password <b>Password1</b>.
 </p>
 <p>
-From your local machine, open <b>Remote Desktop Connection</b> and attempt to log into <b>Client-1</b> using the selected domain user account.
+From your local machine, open <b>Remote Desktop Connection</b> and attempt to log into <b>Client-1</b> using the selected domain user account <b>(mydomain.com\jbaker)</b>.
 </p>
 <p>
-Enter an incorrect password and attempt to log in multiple times. After exceeding the configured threshold of <b>5 failed login attempts</b>, the account will become locked due to the account lockout policy configured earlier.
+Enter an incorrect password and attempt to log in 6-7 times. After exceeding the configured threshold of <b>5 failed login attempts</b>, the account will become locked due to the account lockout policy configured earlier.
 </p>
