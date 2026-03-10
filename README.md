@@ -83,7 +83,7 @@ Set the <b>Account Lockout Threshold</b> to <b>5 invalid logon attempts</b>. Thi
 </p>
 <img width="800" height="1552" alt="image" src="https://github.com/user-attachments/assets/b0f5a02f-ef76-437d-a64b-e9b6271ff59d" />
 <p>
-Next, log into <b>Client-1</b> using <b>mydomain.com\jane_admin</b>. Open <b>PowerShell</b> and run the following command to update Group Policy immediately:
+Next, log into <b>Client-1</b> using <b>mydomain.com\jane_admin</b>. Open <b>PowerShell as an administrator</b> and run the following command to update Group Policy immediately:
 </p>
 <p>
 <pre><code>gpupdate /force</code></pre>
@@ -91,7 +91,11 @@ Next, log into <b>Client-1</b> using <b>mydomain.com\jane_admin</b>. Open <b>Pow
 <p>
 This ensures the newly configured account lockout policy is applied to the client machine before proceeding with the next steps.
 </p>
-<img width="800" height="1012" alt="image" src="https://github.com/user-attachments/assets/5367ad06-fe20-4310-9fe4-55602cdd7a4e" />
+<p>
+Within powershell, run the following command to verify the <b>Account Lockout Policy</b> was applied and to see which group policies are currently applied to the computer.
+</p>
+<pre><code>gpresult /r</code></pre>
+<img width="800" height="1466" alt="image" src="https://github.com/user-attachments/assets/34f20e90-db40-4d79-b30d-2c6c5ae8680c" />
 <hr>
 
 <h3>Step 2: Trigger an Account Lockout</h3>
