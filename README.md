@@ -92,7 +92,7 @@ Next, log into <b>Client-1</b> using <b>mydomain.com\jane_admin</b>. Open <b>Pow
 This ensures the newly configured account lockout policy is applied to the client machine before proceeding with the next steps.
 </p>
 <p>
-Within powershell, run the following command to verify the <b>Account Lockout Policy</b> was applied and to see which group policies are currently applied to the computer.
+Next, within Powershell, run the following command to verify the <b>Account Lockout Policy</b> was applied and to see which group policies are currently applied to the computer.
 </p>
 <pre><code>gpresult /r</code></pre>
 <img width="800" height="1466" alt="image" src="https://github.com/user-attachments/assets/34f20e90-db40-4d79-b30d-2c6c5ae8680c" />
