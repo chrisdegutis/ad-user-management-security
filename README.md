@@ -25,7 +25,7 @@ The environment includes:
 - Organizational Units for users and client machines
 - Multiple domain user accounts
 
-<hr>
+
 
 <h2>Environments and Technologies Used</h2>
 
@@ -48,21 +48,62 @@ The environment includes:
 <h2>High-Level Deployment and Configuration Steps</h2>
 
 <p>
-This lab demonstrates common <b>Active Directory user management</b> and <b>identity security</b> operations performed by system administrators. Using the domain environment deployed in the previous lab, the following tasks are performed:
+<b>This lab demonstrates common <b>Active Directory user management</b> and <b>identity security</b> operations performed by system administrators. Using the domain environment deployed in the previous lab, the following tasks are performed:</b>
 </p>
-
 <ul>
 <li>Ensuring the Domain Controller and client virtual machines are running in the Azure environment</li>
-
 <li>Configuring <b>Account Lockout Policies</b> through <b>Group Policy</b> to enforce authentication security controls</li>
-
 <li>Triggering multiple failed login attempts to simulate a user account lockout</li>
-
 <li>Identifying and unlocking a locked user account within <b>Active Directory Users and Computers (ADUC)</b></li>
-
 <li>Resetting user passwords and restoring account access</li>
-
 <li>Disabling and re-enabling domain user accounts to simulate administrative account management tasks</li>
-
 <li>Reviewing authentication activity in <b>Windows Event Viewer</b> to observe failed logins, successful authentications, and account lockout events</li>
 </ul>
+
+<h2>Deployment and Configuration Steps</h2>
+
+<h3>Step 1: Configure Account Lockout Policy</h3>
+<p>
+Log into <b>DC-1</b> using the administrative account <b>mydomain.com\jane_admin</b>.
+</p>
+<p>
+Open <b>Group Policy Management</b> by selecting <b>Tools → Group Policy Management</b> from <b>Server Manager</b>.
+</p>
+<p>
+In <b>Group Policy Management</b>, right-click <b>mydomain.com</b> and select <b>Create a GPO in this domain, and Link it here</b>. Name the policy <b>Account Lockout Policy</b>.
+</p>
+<p>
+Right-click the newly created GPO and select <b>Edit</b>. Navigate to:
+</p>
+<p>
+<b>Computer Configuration → Policies → Windows Settings → Security Settings → Account Policies → Account Lockout Policy</b>
+</p>
+<p>
+Set the <b>Account Lockout Threshold</b> to <b>5 invalid logon attempts</b>. This policy will automatically lock a user account after five failed authentication attempts.
+</p>
+<img width="800" height="1552" alt="image" src="https://github.com/user-attachments/assets/b0f5a02f-ef76-437d-a64b-e9b6271ff59d" />
+<p>
+Next, log into <b>Client-1</b> using <b>mydomain.com\jane_admin</b>. Open <b>PowerShell</b> and run the following command to update Group Policy immediately:
+</p>
+<p>
+<pre><code>gpupdate /force</code></pre>
+</p>
+<p>
+This ensures the newly configured account lockout policy is applied to the client machine before proceeding with the next steps.
+</p>
+<img width="800" height="1012" alt="image" src="https://github.com/user-attachments/assets/5367ad06-fe20-4310-9fe4-55602cdd7a4e" />
+<hr>
+
+<h3>Step 2: Trigger an Account Lockout</h3>
+<p>
+On <b>DC-1</b>, open <b>Active Directory Users and Computers (ADUC)</b> and within the <b>_EMPLOYEES OU</b> select a random user account that was created in the <a href="https://github.com/chrisdegutis/ad-domain-deployment" target="_blank">previous lab</a>.
+</p>
+<p>
+Take note of the user logon name for that account. 
+</p>
+<p>
+From your local machine, open <b>Remote Desktop Connection</b> and attempt to log into <b>Client-1</b> using the selected domain user account.
+</p>
+<p>
+Enter an incorrect password and attempt to log in multiple times. After exceeding the configured threshold of <b>5 failed login attempts</b>, the account will become locked due to the account lockout policy configured earlier.
+</p>
