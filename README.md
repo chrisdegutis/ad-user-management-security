@@ -27,7 +27,7 @@ The environment includes:
 
 If you have not completed that lab, follow the setup instructions here:
 
-[https://github.com/chrisdegutis/configure-ad](https://github.com/chrisdegutis/ad-domain-deployment)
+[https://github.com/chrisdegutis/ad-domain-deployment](https://github.com/chrisdegutis/ad-domain-deployment)
 <hr>
 
 <h2>Environments and Technologies Used</h2>
