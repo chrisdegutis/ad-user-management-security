@@ -96,7 +96,7 @@ This ensures the newly configured account lockout policy is applied to the clien
 
 <h3>Step 2: Trigger an Account Lockout</h3>
 <p>
-On <b>DC-1</b>, open <b>Active Directory Users and Computers (ADUC)</b> and within the <b>_EMPLOYEES OU</b> select a random user account that was created in the <a href="https://github.com/chrisdegutis/ad-domain-deployment" target="_blank">previous lab</a>.
+On <b>DC-1</b>, open <b>Active Directory Users and Computers (ADUC)</b> and within the <b>_EMPLOYEES OU</b> select a random user account that was created in the <a href="https://github.com/chrisdegutis/ad-domain-deployment">previous lab</a>.
 </p>
 <p>
 Take note of the user logon name for that account. 
