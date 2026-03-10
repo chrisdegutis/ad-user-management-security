@@ -12,11 +12,11 @@ The exercises include configuring <b>account lockout policies through Group Poli
 
 
 
-## Lab Prerequisites
+<h2>Lab Prerequisites</h2>
 
 This lab builds on the Active Directory environment created in the following project:
 
-**Active Directory Domain Deployment in Azure**
+[Active Directory Domain Deployment in Azure](https://github.com/chrisdegutis/ad-domain-deployment)
 
 The environment includes:
 
@@ -25,9 +25,6 @@ The environment includes:
 - Organizational Units for users and client machines
 - Multiple domain user accounts
 
-If you have not completed that lab, follow the setup instructions here:
-
-[https://github.com/chrisdegutis/ad-domain-deployment](https://github.com/chrisdegutis/ad-domain-deployment)
 <hr>
 
 <h2>Environments and Technologies Used</h2>
