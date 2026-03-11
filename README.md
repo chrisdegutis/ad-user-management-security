@@ -167,3 +167,22 @@ Review the authentication events generated during the login attempts. These logs
 <p>
 You can also review authentication activity on <b>Client-1</b> using <b>Event Viewer as an adminstrator</b>. Use <b>mydomain.com\jane_admin</b> and password <b>Cyberlab123!</b> when authenticating.
 </p>
+<hr>
+
+<h2>Conclusion</h2>
+
+<p>
+In this lab, common <b>Active Directory user management</b> and <b>identity security</b> tasks were performed within a domain environment hosted in <b>Microsoft Azure</b>. Using administrative tools such as <b>Active Directory Users and Computers (ADUC)</b> and <b>Group Policy</b>, several real-world account management scenarios were simulated to demonstrate how administrators maintain security and control over domain user accounts.
+</p>
+
+<p>
+The lab included configuring an <b>Account Lockout Policy</b> to protect against repeated failed authentication attempts, intentionally triggering an account lockout, and then resolving the issue by unlocking the account and resetting the user's password. Account administration tasks such as disabling and re-enabling user accounts were also performed, reflecting common help desk and system administrator responsibilities. These controls help organizations reduce the risk of unauthorized access and protect against password-guessing attacks by automatically locking accounts after a defined number of failed logon attempts. :contentReference[oaicite:0]{index=0}
+</p>
+
+<p>
+Additionally, authentication activity was reviewed through <b>Windows Event Viewer</b> to observe login attempts and security events generated during the lab. Monitoring these logs is an important part of troubleshooting authentication issues and identifying suspicious activity in enterprise environments.
+</p>
+
+<p>
+Overall, this project demonstrates practical experience with <b>Active Directory account management</b>, <b>Group Policy security configuration</b>, and <b>authentication troubleshooting</b>. These skills are fundamental to roles in <b>IT support, systems administration, and identity and access management</b> within enterprise Windows environments.
+</p>
