@@ -109,5 +109,32 @@ On <b>DC-1</b>, open <b>Active Directory Users and Computers (ADUC)</b> and with
 From your local machine, open <b>Remote Desktop Connection</b> and attempt to log into <b>Client-1</b> using the selected domain user account <b>(mydomain.com\jbaker)</b>.
 </p>
 <p>
-Enter an incorrect password and attempt to log in 6-7 times. After exceeding the configured threshold of <b>5 failed login attempts</b>, the account will become locked due to the account lockout policy configured earlier.
+Enter an incorrect password and attempt to log in 6 times. After exceeding the configured threshold of <b>5 failed login attempts</b>, the account will become locked due to the account lockout policy configured earlier.
 </p>
+<img width="800" height="1360" alt="image" src="https://github.com/user-attachments/assets/1a211378-1b4d-4365-8d09-3e59539b9c64" />
+<hr>
+
+<h3>Step 3: Confirm the Account Lockout</h3>
+<p>
+Return to <b>DC-1</b> and open <b>Active Directory Users and Computers (ADUC)</b>.
+</p>
+<p>
+Locate the user account <b>John Baker (jbaker)</b> or the one that was used during the failed login attempts. Open the account’s <b>Properties</b> and navigate to the <b>Account</b> tab to observe that the account has been locked.
+</p>
+<img width="800" height="804" alt="image" src="https://github.com/user-attachments/assets/681abb2b-b496-479a-8c4c-ed0d61dc1192" />
+<hr>
+
+<h3>Step 4: Unlock the Account and Reset the Password</h3>
+<p>
+In the user account <b>Properties</b> window, unlock the account by checking the checkbox next to <b>Unlock Account</b>. Click <b>Apply then OK</b>.
+</p>
+<img width="800" height="1614" alt="image" src="https://github.com/user-attachments/assets/d6c49c16-fdc2-483e-bc23-22598859a5f2" />
+<p>
+Right-click the user account (John Baker) and select <b>Reset Password</b>. Assign a new password (we will be using <b>Password2</b> and we will require the user to change their password at next logon making this a temporary password. <b>Save the changes</b>.
+</p>
+<img width="800" height="1328" alt="image" src="https://github.com/user-attachments/assets/bb4d5ac5-eb32-460e-b72d-b94966f3544b" />
+<img width="800" height="1280" alt="image" src="https://github.com/user-attachments/assets/35ec1e54-d70c-4f6c-913f-ec40572f5a11" />
+<p>
+Attempt to log into <b>Client-1</b> again using <b>Password2</b> to verify that the account has been restored.
+</p>
+
