@@ -130,11 +130,24 @@ In the user account <b>Properties</b> window, unlock the account by checking the
 </p>
 <img width="800" height="1614" alt="image" src="https://github.com/user-attachments/assets/d6c49c16-fdc2-483e-bc23-22598859a5f2" />
 <p>
-<b>OPTIONAL:</b> Right-click the user account (John Baker) and select <b>Reset Password</b>. Assign a new password and you can also require the user to change their password at next logon making this a temporary password but we will not be doing this for the lab.
+Right-click the user account (John Baker) and select <b>Reset Password</b>. Assign a new password (we will be using <b>Password2</b> in this lab). You can also require the user to change their password at next logon making this a temporary password but we will not be doing this for the lab. <b>Save the changes</b>
 </p>
 <img width="800" height="1328" alt="image" src="https://github.com/user-attachments/assets/bb4d5ac5-eb32-460e-b72d-b94966f3544b" />
-<img width="800" height="1280" alt="image" src="https://github.com/user-attachments/assets/35ec1e54-d70c-4f6c-913f-ec40572f5a11" />
+<img width="800" height="1420" alt="image" src="https://github.com/user-attachments/assets/20c2d280-be6d-4196-aca0-c16ea79269fe" />
 <p>
-Attempt to log into <b>Client-1</b> again using <b>Password1</b> to verify that the account has been restored.
+Attempt to log into <b>Client-1</b> again using <b>Password2</b> to verify that the account has been restored.
 </p>
+<hr>
 
+<h3>Step 5: Disable and Re-enable a User Account</h3>
+<p>
+In <b>Active Directory Users and Computers</b>, right-click the same user account <b>(John Baker)</b> and select <b>Disable Account</b>.
+</p>
+<img width="800" height="1294" alt="image" src="https://github.com/user-attachments/assets/95009f46-851f-413f-a7cb-bda2d1222095" />
+<p>
+Attempt to log into <b>Client-1</b> using the disabled account and observe the error message indicating that the account has been disabled.
+</p>
+<img width="800" height="682" alt="image" src="https://github.com/user-attachments/assets/50b2ec31-6841-457f-8dee-f75260471dee" />
+<p>
+Return to <b>Active Directory Users and Computers</b>, re-enable the account, and attempt to log in again to confirm access has been restored.
+</p>
