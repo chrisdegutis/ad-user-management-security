@@ -130,11 +130,11 @@ In the user account <b>Properties</b> window, unlock the account by checking the
 </p>
 <img width="800" height="1614" alt="image" src="https://github.com/user-attachments/assets/d6c49c16-fdc2-483e-bc23-22598859a5f2" />
 <p>
-Right-click the user account (John Baker) and select <b>Reset Password</b>. Assign a new password (we will be using <b>Password2</b> and we will require the user to change their password at next logon making this a temporary password. <b>Save the changes</b>.
+OPTIONAL: Right-click the user account (John Baker) and select <b>Reset Password</b>. Assign a new password and you can also require the user to change their password at next logon making this a temporary password but we will not be doing this for the lab. <b>Save the changes</b>.
 </p>
 <img width="800" height="1328" alt="image" src="https://github.com/user-attachments/assets/bb4d5ac5-eb32-460e-b72d-b94966f3544b" />
 <img width="800" height="1280" alt="image" src="https://github.com/user-attachments/assets/35ec1e54-d70c-4f6c-913f-ec40572f5a11" />
 <p>
-Attempt to log into <b>Client-1</b> again using <b>Password2</b> to verify that the account has been restored.
+Attempt to log into <b>Client-1</b> again using <b>Password1</b> to verify that the account has been restored.
 </p>
 
