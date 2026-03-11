@@ -130,7 +130,7 @@ In the user account <b>Properties</b> window, unlock the account by checking the
 </p>
 <img width="800" height="1614" alt="image" src="https://github.com/user-attachments/assets/d6c49c16-fdc2-483e-bc23-22598859a5f2" />
 <p>
-<b>OPTIONAL:</b> Right-click the user account (John Baker) and select <b>Reset Password</b>. Assign a new password and you can also require the user to change their password at next logon making this a temporary password but we will not be doing this for the lab. <b>Save the changes</b>.
+<b>OPTIONAL:</b> Right-click the user account (John Baker) and select <b>Reset Password</b>. Assign a new password and you can also require the user to change their password at next logon making this a temporary password but we will not be doing this for the lab.
 </p>
 <img width="800" height="1328" alt="image" src="https://github.com/user-attachments/assets/bb4d5ac5-eb32-460e-b72d-b94966f3544b" />
 <img width="800" height="1280" alt="image" src="https://github.com/user-attachments/assets/35ec1e54-d70c-4f6c-913f-ec40572f5a11" />
