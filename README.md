@@ -141,7 +141,7 @@ Attempt to log into <b>Client-1</b> again using <b>Password2</b> to verify that 
 
 <h3>Step 5: Disable and Re-enable a User Account</h3>
 <p>
-In <b>Active Directory Users and Computers</b>, right-click the same user account <b>(John Baker)</b> and select <b>Disable Account</b>.
+In <b>Active Directory Users and Computers</b>, right-click the same user account <b>John Baker</b> and select <b>Disable Account</b>.
 </p>
 <img width="800" height="1294" alt="image" src="https://github.com/user-attachments/assets/95009f46-851f-413f-a7cb-bda2d1222095" />
 <p>
@@ -149,5 +149,21 @@ Attempt to log into <b>Client-1</b> using the disabled account and observe the e
 </p>
 <img width="800" height="682" alt="image" src="https://github.com/user-attachments/assets/50b2ec31-6841-457f-8dee-f75260471dee" />
 <p>
-Return to <b>Active Directory Users and Computers</b>, re-enable the account, and attempt to log in again to confirm access has been restored.
+Return to <b>Active Directory Users and Computers</b>, re-enable the account by right-clicking <b>John Baker</b> and selecting <b>Enable Account</b>, and attempt to log in again to confirm access has been restored.
+</p>
+<img width="800" height="567" alt="image" src="https://github.com/user-attachments/assets/cbc89205-3230-431c-a227-bd6ae99165ee" />
+<hr>
+
+<h3>Step 6: Review Authentication Logs</h3>
+<p>
+On the <b>Domain Controller (DC-1)</b>, open <b>Event Viewer</b> and navigate to:
+</p>
+<p>
+<b>Windows Logs → Security</b>
+</p>
+<p>
+Review the authentication events generated during the login attempts. These logs record failed login attempts, successful authentications, and account lockout events.
+</p>
+<p>
+You can also review authentication activity on <b>Client-1</b> using <b>Event Viewer as an adminstrator</b>. Use <b>mydomain.com\jane_admin</b> and password <b>Cyberlab123!</b> when authenticating.
 </p>
