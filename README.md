@@ -155,18 +155,48 @@ Return to <b>Active Directory Users and Computers</b>, re-enable the account by 
 <hr>
 
 <h3>Step 6: Review Authentication Logs</h3>
+
 <p>
-On the <b>Domain Controller (DC-1)</b>, open <b>Event Viewer</b> and navigate to:
+In this step, we will review the authentication events generated during the login attempts. 
+These logs record failed login attempts, successful authentications, and account lockout events.
+Analyzing these logs is a common troubleshooting task performed by IT support and system administrators.
 </p>
 <p>
-<b>Windows Logs → Security</b>
+On <b>Client-1</b>, open <b>Event Viewer</b> as an administrator. Authenticate using the domain administrator account 
+<b>mydomain.com\jane_admin</b> with the password <b>Cyberlab123!</b>.
 </p>
 <p>
-Review the authentication events generated during the login attempts. These logs record failed login attempts, successful authentications, and account lockout events.
+Navigate to:
 </p>
 <p>
-You can also review authentication activity on <b>Client-1</b> using <b>Event Viewer as an adminstrator</b>. Use <b>mydomain.com\jane_admin</b> and password <b>Cyberlab123!</b> when authenticating.
+<b>Event Viewer → Windows Logs → Security</b>
 </p>
+<p>
+Within the Security log, locate the failed authentication attempts generated during the test. 
+These events are logged as <b>Event ID 4625 (Audit Failure)</b>, which indicate a failed logon attempt.
+</p>
+<p>
+Review the timestamps of the failed login attempts and identify the <b>5th failed attempt</b>. 
+Once the configured lockout threshold is reached, the domain controller enforces the account lockout policy.
+</p>
+<img width="800" height="1338" alt="Client authentication failures" src="https://github.com/user-attachments/assets/c2b7c53b-1d80-4106-a3de-8edf10362507" />
+<p>
+Next, review authentication activity on <b>DC-1</b>. The domain controller records the account lockout event 
+(<b>Event ID 4740</b>), which confirms that the user's account has been locked due to repeated failed login attempts.
+</p>
+<p>
+On <b>DC-1</b>, open <b>Event Viewer</b> as an administrator.
+</p>
+<p>Navigate to:</p>
+<p>
+<b>Event Viewer → Windows Logs → Security</b>
+</p>
+<p>
+This event appears as an <b>Audit Success</b> under the <b>User Account Management</b> category, indicating that the 
+lockout policy was successfully applied by Active Directory.
+</p>
+<img width="800" height="1122" alt="Domain controller account lockout event" src="https://github.com/user-attachments/assets/52d51986-7ee0-4645-a335-0f6501d6aa4d" />
+<p><b>* Note: The timestamp of the 5th failed password attempt matches the account lockout event. This confirms that the Domain Controller successfully enforced the account lockout policy configured in the Group Policy Object (GPO).</b></p>
 <hr>
 
 <h2>Conclusion</h2>
